@@ -19,7 +19,6 @@ body {
     .navbar-header .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
-        font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
 
@@ -31,8 +30,8 @@ body {
 
     .navbar-header .navbar-text {
         color: $theme-primary;
+        display: block;
         @include sans-serif-font;
-        font-size: 14px;
         text-transform: uppercase;
 
         &:hover,
