@@ -3,43 +3,222 @@
 
 @charset "utf-8";
 
-// Example Defaults
-// $base-font-family: Helvetica, Arial, sans-serif;
-// $base-font-size:   16px;
-// $small-font-size:  $base-font-size * 0.875;
-// $base-line-height: 1.5;
+@import "variables", "mixins";
 
-// $spacing-unit:     30px;
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
 
-// $text-color:       #111;
-// $background-color: #fdfdfd;
-// $brand-color:      #2a7ae2;
+body {
+    @include serif-font;
+}
 
-// $grey-color:       #828282;
-// $grey-color-light: lighten($grey-color, 40%);
-// $grey-color-dark:  darken($grey-color, 25%);
+hr {
+    border-color: $theme-primary;
+    border-width: 3px;
+    max-width: 50px;
+}
 
-// // Width of the content area
-// $content-width:    800px;
+hr.light {
+    border-color: white;
+}
 
-// $on-palm:          600px;
-// $on-laptop:        800px;
+a {
+    @include transition-all;
+    color: $theme-primary;
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+    &:hover,
+    &:focus {
+        color: darken($theme-primary, 10%);
+    }
+}
 
-// variables.less
-//$theme-primary: #F05F40;
-$theme-primary: #4527a0;
-$theme-dark: #222;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include sans-serif-font;
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "mixins",
-        "base"
-;
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.bg-primary {
+    background-color: $theme-primary;
+}
+
+.bg-dark {
+    background-color: $theme-dark;
+    color: white;
+}
+
+.text-faded {
+    color: rgba(white, .7);
+}
+
+section {
+    padding: 100px 0;
+}
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+// Sections
+.section-heading {
+    margin-top: 0;
+}
+
+.feature-box {
+    margin: 50px auto 0;
+
+    @media (min-width: 992px) {
+        margin: 20px auto 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.division-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+
+    .division-box-caption {
+        color: white;
+        opacity: 0;
+        display: block;
+        background: rgba( $theme-primary, .9 );
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        @include transition-all;
+
+        .division-box-caption-content {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .project-category,
+            .project-name {
+                @include sans-serif-font;
+                padding: 0 15px;
+            }
+
+            .project-category {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .project-name {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &:hover {
+        .division-box-caption {
+            opacity: 1;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .division-box-caption {
+            .division-box-caption-content {
+                .project-category {
+                    font-size: 16px;
+                }
+
+                .project-name {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.call-to-action {
+    h2 {
+        margin: 0 auto 20px;
+    }
+}
+// Bootstrap Overrides
+.text-primary {
+    color: $theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+// Button Styles
+.btn-default {
+    @include button-variant($theme-dark, white, white);
+}
+
+.btn-primary {
+    @include button-variant(white, $theme-primary, $theme-primary);
+}
+
+.btn {
+    @include sans-serif-font;
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+// Contact
+#contact .fa {
+    color: $theme-dark;
+    font-size: 4em;
+}
+// Extras
+// -- Highlight Color Customization
+ ::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: $theme-dark;
+}
+
+ ::selection {
+    color: white;
+    text-shadow: none;
+    background: $theme-dark;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: $theme-dark;
+}
