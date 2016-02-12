@@ -100,16 +100,15 @@ aside {
 
     .division-box-caption {
         color: white;
-        opacity: 0;
+        opacity: 1;
         display: block;
-        background: rgba( $theme-primary, .9 );
+        background: rgba( $theme-primary, .0 );
         position: absolute;
         bottom: 0;
         text-align: center;
         width: 100%;
         height: 100%;
         @include transition-all;
-
         .division-box-caption-content {
             width: 100%;
             text-align: center;
@@ -121,6 +120,7 @@ aside {
             .project-name {
                 @include sans-serif-font;
                 padding: 0 15px;
+				opacity: 1;
             }
 
             .project-category {
@@ -138,6 +138,8 @@ aside {
     &:hover {
         .division-box-caption {
             opacity: 1;
+			background: rgba( $theme-primary, .5 );
+
         }
     }
 
@@ -221,4 +223,10 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
+}
+#NA1, #NA3, #EU1, #EU3 {
+  position:absolute;
+}
+#NA2, #NA4, #EU2, #EU4 {
+opacity:0;
 }
