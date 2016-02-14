@@ -2,7 +2,6 @@
 ---
 
 @charset "utf-8";
-
 @import "variables", "mixins";
 
 // Navigation
@@ -137,18 +136,16 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
-    ), url('../img/header.jpg');
-	
-	text-align: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url("../img/header.jpg");
+    text-align: center;
     color: white;
+
     .header-content {
         position: relative;
         text-align: center;
-        padding: 100px 15px 100px;
+        padding: 100px 15px;
         width: 100%;
+
         .header-content-inner {
             h1 {
                 font-weight: 700;
@@ -156,9 +153,11 @@ header {
                 margin-top: 0;
                 margin-bottom: 0;
             }
+
             hr {
                 margin: 30px auto;
             }
+
             p {
                 font-weight: 300;
                 color: rgba(white, .7);
@@ -167,8 +166,10 @@ header {
             }
         }
     }
+
     @media (min-width: 768px) {
         min-height: 100%;
+
         .header-content {
             position: absolute;
             top: 50%;
@@ -176,10 +177,12 @@ header {
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             padding: 0 50px;
+
             .header-content-inner {
                 max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
+
                 p {
                     font-size: 18px;
                     max-width: 80%;
