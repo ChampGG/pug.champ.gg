@@ -137,7 +137,23 @@ aside {
         }
     }
 
+    .division-box-bg-normal {
+        display: inherit;
+    }
+
+    .division-box-bg-hover {
+        display: none;
+    }
+
     &:hover {
+        .division-box-bg-normal {
+            display: none;
+        }
+
+        .division-box-bg-hover {
+            display: inherit;
+        }
+
         .division-box-caption {
             opacity: 1;
 			background: rgba( $theme-primary, .5 );
@@ -225,10 +241,4 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
-}
-#NA1, #NA3, #EU1, #EU3 {
-  position:absolute;
-}
-#NA2, #NA4, #EU2, #EU4 {
-opacity:0;
 }
