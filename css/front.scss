@@ -136,7 +136,8 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url("../img/header.jpg");
+	background-size:contain;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) ), url("../img/teampugchamp.jpg");
     text-align: center;
     color: white;
 
