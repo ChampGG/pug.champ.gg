@@ -2,7 +2,6 @@
 ---
 
 @charset "utf-8";
-
 @import "variables", "mixins";
 
 html,
@@ -109,6 +108,7 @@ aside {
         width: 100%;
         height: 100%;
         @include transition-all;
+
         .division-box-caption-content {
             width: 100%;
             text-align: center;
@@ -120,9 +120,8 @@ aside {
             .project-name {
                 @include sans-serif-font;
                 padding: 0 15px;
-				opacity: 1;
-				text-shadow: 2px 2px 3px #000000;
-
+                opacity: 1;
+                text-shadow: 2px 2px 3px #000000;
             }
 
             .project-category {
@@ -137,10 +136,24 @@ aside {
         }
     }
 
+    .division-box-bg-normal {
+        display: inherit;
+    }
+
+    .division-box-bg-hover {
+        display: none;
+    }
+
     &:hover {
+        .division-box-bg-normal {
+            display: none;
+        }
+
+        .division-box-bg-hover {
+            display: inherit;
+        }
+
         .division-box-caption {
-            opacity: 1;
-			background: rgba( $theme-primary, .5 );
 
         }
     }
@@ -165,6 +178,7 @@ aside {
         margin: 0 auto 20px;
     }
 }
+
 // Bootstrap Overrides
 .text-primary {
     color: $theme-primary;
@@ -174,6 +188,7 @@ aside {
     padding-right: 0;
     padding-left: 0;
 }
+
 // Button Styles
 .btn-default {
     @include button-variant($theme-dark, white, white);
@@ -194,11 +209,13 @@ aside {
 .btn-xl {
     padding: 15px 30px;
 }
+
 // Contact
 #contact .fa {
     color: $theme-dark;
     font-size: 4em;
 }
+
 // Extras
 // -- Highlight Color Customization
  ::-moz-selection {
@@ -226,9 +243,6 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-#NA1, #NA3, #EU1, #EU3 {
-  position:absolute;
-}
-#NA2, #NA4, #EU2, #EU4 {
-opacity:0;
+#divisions {
+background-image:url("../img/pattern.png");
 }
