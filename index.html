@@ -1,0 +1,111 @@
+---
+permalink: /
+---
+
+<!DOCTYPE HTML>
+
+<html>
+    {% include head.html %}
+
+    <body class="landing">
+        <div id="page-wrapper">
+            {% include header.html alt=true %}
+
+            <section id="banner">
+                <div class="inner">
+                    <h2>PugChamp</h2>
+                    <p>The premier PUG service<br />
+                    for competitive TF2<br />
+                    available to all.</p>
+                    <ul class="actions">
+                        <li><a href="https://eu.pug.champ.gg" class="button special">EU</a></li>
+                        <li><a href="https://na.pug.champ.gg" class="button special">NA</a></li>
+                    </ul>
+                </div>
+                <a href="#start" class="more scrolly">Learn More</a>
+            </section>
+
+            <section id="start" class="wrapper style1 special">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Premise</h2>
+                        <p>Draft-organized pickup games, in which captains select players for their team from a pool of available players, are a familiar concept to many game veterans.<br />
+                        PugChamp brings this proven system to the present day with modern feel and functionality.</p>
+                    </header>
+                    <ul class="icons major">
+                        <li><span class="icon fa-check major style1"><span class="label">Lorem</span></span></li>
+                        <li><span class="icon fa-code major style2"><span class="label">Ipsum</span></span></li>
+                        <li><span class="icon fa-cogs major style3"><span class="label">Dolor</span></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="wrapper alt style2">
+                <section class="spotlight">
+                    <div class="image"><img src="{{ "/assets/img/launchpad.png" | prepend: site.baseurl }}" alt="" /></div>
+                    <div class="content">
+                        <h2>Ready Up</h2>
+                        <p>Players select what roles they want to play in an upcoming game.</p>
+                    </div>
+                </section>
+                <section class="spotlight">
+                    <div class="image"><img src="{{ "/assets/img/draft.png" | prepend: site.baseurl }}" alt="" /></div>
+                    <div class="content">
+                        <h2>Captain Draft</h2>
+                        <p>Two players become captains and select the teams and map for the game.</p>
+                    </div>
+                </section>
+                <section class="spotlight">
+                    <div class="image"><img src="{{ "/assets/img/ratings.png" | prepend: site.baseurl }}" alt="" /></div>
+                    <div class="content">
+                        <h2>Ratings</h2>
+                        <p>After each game, every player's rating is adjusted to better reflect where they rank within the universe of players.</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="wrapper style3 special">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Full Service</h2>
+                        <p>From start to finish, PugChamp manages all of the logistics to make the experience as smooth as possible.</p>
+                    </header>
+                    <ul class="features">
+                        <li class="icon fa-cloud">
+                            <h3>Servers</h3>
+                            <p>All servers are provided &mdash; just show up and play.</p>
+                        </li>
+                        <li class="icon fa-sort-amount-desc">
+                            <h3>Game Summaries</h3>
+                            <p>Each game is summarized on <a href="http://logs.tf">logs.tf</a> with stats to show the best and worst performers.</p>
+                        </li>
+                        <li class="icon fa-film">
+                            <h3>Demos</h3>
+                            <p>Demos of all games are automatically recorded and uploaded to <a href="http://demos.tf">demos.tf</a> for viewing after the game.</p>
+                        </li>
+                        <li class="icon fa-pie-chart">
+                            <h3>Career Stats</h3>
+                            <p>Full career histories and summarized stats are publicly visible on every player's profile.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="cta" class="wrapper style4">
+                <div class="inner">
+                    <header>
+						<h2>Constantly Evolving</h2>
+						<p>Never satisfied with the status quo, PugChamp is always seeking out new ways to improve the PUG experience.</p>
+					</header>
+					<ul class="actions vertical">
+						<li><a href="/about/" class="button fit">About</a></li>
+					</ul>
+                </div>
+            </section>
+
+            {% include footer.html %}
+        </div>
+
+        {% include scripts.html %}
+    </body>
+</html>
