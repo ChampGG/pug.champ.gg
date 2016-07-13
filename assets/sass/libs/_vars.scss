@@ -22,11 +22,11 @@
 
 // Font.
 	$font: (
-		family:				('Open Sans', Helvetica, sans-serif),
+		family:				('Roboto', 'Open Sans', Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
-		weight-bold:		600,
-		weight-extrabold:	800
+		weight-bold:		700,
+		weight-extrabold:	900
 	);
 
 // Palette.
@@ -45,10 +45,10 @@
 			fg-bold:		#ffffff,
 			fg:				mix(#3f3051, #ffffff, 25%),
 			fg-light:		mix(#3f3051, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
+			border:			rgba(255,255,255,0.125),
+			border-bg:		rgba(0,0,0,0.075),
+			border2:		rgba(255,255,255,0.25),
+			border2-bg:		rgba(0,0,0,0.2)
 		),
 
 		accent2: (
@@ -89,10 +89,10 @@
 			fg-bold:		#ffffff,
 			fg:				mix(#7d4071, #ffffff, 25%),
 			fg-light:		mix(#7d4071, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
+			border:			rgba(255,255,255,0.125),
+			border-bg:		rgba(0,0,0,0.075),
+			border2:		rgba(255,255,255,0.25),
+			border2-bg:		rgba(0,0,0,0.2)
 		),
 
 		accent6: (
