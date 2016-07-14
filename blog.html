@@ -1,0 +1,31 @@
+---
+title: Blog
+description: a look into our operations
+layout: default
+permalink: /blog/
+---
+<section class="wrapper style5">
+    <div class="inner">
+        <h3>Posts</h3>
+
+        <div class="table-wrapper">
+			<table>
+				<thead>
+					<tr>
+						<th class="align-left">Post</th>
+						<th class="align-right">Date</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for post in site.posts %}
+                        <tr>
+                            <td class="align-left"><a href="{{post.url}}">{{post.title}}</a></td>
+                            <td class="align-right">{{ post.date | date: "%B %-d, %Y" }}</td>
+                        </tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+		</div>
+
+    </div>
+</section>

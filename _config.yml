@@ -4,5 +4,13 @@ description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pug.champ.gg" # the base hostname & protocol for your site
 
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+
 # Build settings
 markdown: kramdown

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="wrapper style5">
+    <div class="inner">
+        {{content}}
+
+        <p><em>posted: {{ page.date | date: "%B %-d, %Y" }}</em></p>
+
+        <div class="row uniform">
+            <div class="4u">
+                {% if page.previous %}
+                    <a href="{{page.previous.url}}" class="button icon fa-caret-left fit">{{page.previous.title}}</a>
+                {% endif %}
+            </div>
+            <div class="4u">
+                <a href="{{ "/blog/" | prepend: site.baseurl }}" class="button icon fa-list fit">See More Posts</a>
+            </div>
+            <div class="4u">
+                {% if page.next %}
+                    <a href="{{page.next.url}}" class="button icon fa-caret-left fit">{{page.next.title}}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
