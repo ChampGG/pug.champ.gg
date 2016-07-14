@@ -16,19 +16,15 @@ permalink: /about/
     <div class="inner">
         <h3>Staff</h3>
 
-        <h4>Global</h4>
-        <ul class="alt">
-            <li><em>erynn</em>, Operations Officer</li>
-            <li><em>tsc</em>, Visionary Officer</li>
-        </ul>
+        {% for group in site.data.staff %}
+            <h4>{{group.group}}</h4>
 
-        <h4>North America</h4>
-        <ul class="alt">
-        </ul>
-
-        <h4>Europe</h4>
-        <ul class="alt">
-        </ul>
+            <ul class="alt">
+                {% for member in group.members %}
+                    <li><em>{{member.name}}</em>, {{member.title}}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
     </div>
 </section>
 <section class="wrapper style3">
